@@ -1,0 +1,1 @@
+<script type="text/javascript" src="{{ asset('public/architect/assets/scripts/main.js') }}"></script></body>
