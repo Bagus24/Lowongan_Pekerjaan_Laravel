@@ -9,7 +9,7 @@
 			    <div class="container">
 			    	<div class="row align-items-center justify-content-between d-flex">
 				      <div id="logo">
-				        <a href="{{ url('index') }}"><img src="{{ asset('public/joblisting/img/logo.png') }}" alt="" title="" /></a>
+				        <a href="{{ url('/') }}"><img src="{{ asset('public/joblisting/img/logo.png') }}" alt="" title="" /></a>
 				      </div>
 				      <nav id="nav-menu-container">
 					  

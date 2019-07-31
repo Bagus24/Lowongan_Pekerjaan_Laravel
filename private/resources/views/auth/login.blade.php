@@ -12,26 +12,25 @@
 						<div class="banner-content col-lg-6">
 
                             <div class="row justify-content-center form-wrap">
-                                <p class="text-white"> Silahkan LOGIN terlebih dahulu</p>
+                                <div id="logo">
+                                    <a href="{{ url('/') }}"><img src="{{ asset('public/joblisting/img/logo.png') }}" alt="" title="" /></a>
+                                </div>
                             </div>
                             
                             <form class="form-area" method="POST" action="{{ route('login') }}" class="contact-form text-right">
                             @csrf    
                             <div class="row">	
 									<div class="col-lg-12 form-group">
-
-										<input name="email" value="{{ old('email') }}" placeholder="Masukan email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Masukan email'" class="common-input mb-20 form-control @error('email') is-invalid @enderror" required="" type="email">
                                             @error('email')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
+                                                <div class="alert alert-danger" role="alert">Email atau password salah</div>
                                             @enderror
-										<input name="password" placeholder="Masukan password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Masukan password'" class="common-input mb-20 form-control @error('password') is-invalid @enderror" required="" type="password">
                                             @error('password')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
+                                                <div class="alert alert-danger" role="alert">Email atau password salah</div>
                                             @enderror
+										<input name="email" value="{{ old('email') }}" placeholder="Masukan email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Masukan email'" class="common-input mb-20 form-control @error('email') is-invalid @enderror" required="" type="email">
+                                            
+										<input name="password" placeholder="Masukan password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Masukan password'" class="common-input mb-20 form-control @error('password') is-invalid @enderror" required="" type="password">
+                                            
                                         <div class="switch-wrap d-flex">
                                             
                                             <div class="primary-checkbox">
@@ -41,7 +40,7 @@
                                             <p class="text-white">&nbsp;Ingat saya</p>
                                         </div>
 
-                                        <button type="submit" class="primary-btn mt-20 text-white" style="float: center;">Masuk</button>
+                                        <button type="submit" class="genric-btn primary" style="float: center;">Masuk</button>
 										<div class="mt-20 alert-msg" style="text-align: left;"></div>
 									</div>
 								</div>

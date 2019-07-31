@@ -17,7 +17,7 @@
                         @else
 				        <ul class="nav-menu">
 						
-				          <li class="menu-active"><a href="{{ url('/') }}">Home</a></li>
+				          
 				          <li><a href="about-us.html">About Us</a></li>
 				          <li><a href="category.html">Category</a></li>
 				          <li><a href="price.html">Price</a></li>
@@ -40,10 +40,6 @@
 								</li>
 				            </ul>
 				          </li>
-						
-				          <li><a class="ticker-btn" href="{{ route('login') }}">Login</a></li>	
-						  
-						  <li><a class="ticker-btn" href="{{ route('register') }}">Signup</a></li>	
 						  		          				          
 				        </ul>
 						@endguest
